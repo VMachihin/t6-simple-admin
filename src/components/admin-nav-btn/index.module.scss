@@ -1,72 +1,71 @@
-@import "src/assets/styles/vars";
+@import 'src/styles/vars';
+
 aside {
-  .navBtn {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    @include opensans-semi;
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    width: 100%;
-    padding: 10px 12px 10px 14px;
-    border-radius: 5px;
-    transition: all .3s;
-    svg {
-      width: 20px;
-      min-width: 20px;
-    }
+	.navBtn {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 600;
+		@include opensans-semi;
+		display: flex;
+		align-items: center;
+		gap: 17px;
+		width: 100%;
+		padding: 10px 12px 10px 14px;
+		border-radius: 5px;
+		transition: all 0.3s;
+		svg {
+			width: 20px;
+			min-width: 20px;
+		}
 
-    &:hover {
-      background: #10537C;
-      svg {
-        opacity: 1;
-      }
-    }
-  }
+		&:hover {
+			background: #10537c;
+			svg {
+				opacity: 1;
+			}
+		}
+	}
 
-  .navArrow {
-    margin-left: auto;
-    transform: rotate(-90deg);
-  }
+	.navArrow {
+		margin-left: auto;
+		transform: rotate(-90deg);
+	}
 
-  ._activeBtn {
-    background: #10537C;
-    svg {
-      opacity: 1;
-      fill: #ffffff;
-      path {
-        fill: #ffffff;
-      }
-    }
+	._activeBtn {
+		background: #10537c;
+		svg {
+			opacity: 1;
+			fill: #ffffff;
+			path {
+				fill: #ffffff;
+			}
+		}
 
-    .navArrow {
-      transform: rotate(0);
-    }
-  }
+		.navArrow {
+			transform: rotate(0);
+		}
+	}
 
-  .navSubmenu {
-    padding-top: 14px;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 23px;
+	.navSubmenu {
+		padding-top: 14px;
+		padding-left: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 23px;
 
-    a {
-      color: #8EFFF8;
-      transition: all .3s;
-      &:hover {
-        color: #ffffff;
-      }
-    }
+		a {
+			color: #8efff8;
+			transition: all 0.3s;
+			&:hover {
+				color: #ffffff;
+			}
+		}
 
-    ._activeSubLink {
-      color: #ffffff;
-      text-decoration: none;
-      pointer-events: none;
-    }
-  }
+		._activeSubLink {
+			color: #ffffff;
+			text-decoration: none;
+			pointer-events: none;
+		}
+	}
 }
-
-

@@ -1,66 +1,65 @@
-@import 'src/assets/styles/vars';
+@import 'src/styles/vars';
 
 .adminSection {
-  background: #FFFFFF;
-  margin-bottom: 20px;
-  padding: 17px 20px 30px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px 0 rgba(1, 61, 86, 0.15);
+	background: #ffffff;
+	margin-bottom: 20px;
+	padding: 17px 20px 30px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba(1, 61, 86, 0.15);
 
-  h4 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
+	h4 {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
 }
 
 .switchedContentWrapper {
-  padding-left: 27px;
+	padding-left: 27px;
 
-  @media (max-width: 768px) {
-    padding-left: 0;
-  }
+	@media (max-width: 768px) {
+		padding-left: 0;
+	}
 }
 
 ._noBlock {
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
 }
 
 .sectionHead {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
 
-  h2 {
-    @include opensans-bold;
-    font-size: 18px;
-    color: #000000;
-  }
+	h2 {
+		@include opensans-bold;
+		font-size: 18px;
+		color: #000000;
+	}
 
-  .singleTitle {
-    border-bottom: 1px solid #E1E1E1;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    width: 100%;
-  }
+	.singleTitle {
+		border-bottom: 1px solid #e1e1e1;
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+		width: 100%;
+	}
 }
 
 .noBorderBottom {
-  &.singleTitle {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+	&.singleTitle {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
 }
 
-
 ._activeSection {
-  border-bottom: 1px solid #E1E1E1;
-  padding-bottom: 15px;
-  margin-bottom: 27px;
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 15px;
+	margin-bottom: 27px;
 }

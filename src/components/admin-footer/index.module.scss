@@ -1,41 +1,41 @@
-@import "src/assets/styles/vars";
+@import 'src/styles/vars';
 
 .adminFooter {
-  padding: 53px 0;
-  background: linear-gradient(270deg, rgba(0, 166, 156, 0.50) 4.78%, #286A91 39.47%);
+	padding: 53px 0;
+	background: linear-gradient(270deg, rgba(0, 166, 156, 0.5) 4.78%, #286a91 39.47%);
 
-  a {
-    color: #6FF5FE;
-    font-size: 14px;
-    @include opensans-semi;
-    display: inline-block;
-  }
+	a {
+		color: #6ff5fe;
+		font-size: 14px;
+		@include opensans-semi;
+		display: inline-block;
+	}
 
-  p {
-    color: #ffffff;
-    font-size: 14px;
-  }
+	p {
+		color: #ffffff;
+		font-size: 14px;
+	}
 }
 
 .footerCompany {
-  font-weight: 600;
-  margin-bottom: 25px;
+	font-weight: 600;
+	margin-bottom: 25px;
 }
 
 .footerBottom {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .footerLinks {
-  display: flex;
-  gap: 40px;
+	display: flex;
+	gap: 40px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 20px;
-  }
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 }

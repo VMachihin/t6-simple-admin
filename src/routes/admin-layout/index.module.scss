@@ -1,291 +1,290 @@
-@import "src/assets/styles/vars";
+@import 'src/styles/vars';
 
 .adminInner {
-  display: flex;
-  gap: 23px;
-  align-items: flex-start;
+	display: flex;
+	gap: 23px;
+	align-items: flex-start;
 
-  @include opensans-regular;
-  font-size: 14px;
+	@include opensans-regular;
+	font-size: 14px;
 
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 
-  @media(max-width: 768px) {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 27px;
-    color: #ffffff;
-    line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 25px;
-  }
+	h1 {
+		font-size: 27px;
+		color: #ffffff;
+		line-height: 1.2;
+		font-weight: 700;
+		margin-bottom: 25px;
+	}
 }
 
 .contentWrapper {
-  padding-top: 5px;
-  flex-grow: 1;
-  overflow-x: auto;
+	padding-top: 5px;
+	flex-grow: 1;
+	overflow-x: auto;
 
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 }
 
 .adminMain {
-  background: linear-gradient(270deg, rgba(0, 166, 156, 0.50) 4.78%, #286A91 39.47%);
+	background: linear-gradient(270deg, rgba(0, 166, 156, 0.5) 4.78%, #286a91 39.47%);
 }
 
 ul.adminTablePagination {
-  margin-bottom: 20px;
-  background-color: #EDF2F6;
-  padding: 8px 10px;
-  border: 1px solid #C2CAC9;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-  gap: 3px;
+	margin-bottom: 20px;
+	background-color: #edf2f6;
+	padding: 8px 10px;
+	border: 1px solid #c2cac9;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	gap: 3px;
 
-  li {
-    color: #000000;
-    @include opensans-regular;
-    font-size: 14px;
-    padding: 3px 8px;
-    &:first-child {
-      display: none;
-    }
-  }
+	li {
+		color: #000000;
+		@include opensans-regular;
+		font-size: 14px;
+		padding: 3px 8px;
+		&:first-child {
+			display: none;
+		}
+	}
 }
 
 .activeCount {
-  border: 1px solid #113770;
-  border-radius: 3px;
-  background-color: #ffffff;
+	border: 1px solid #113770;
+	border-radius: 3px;
+	background-color: #ffffff;
 }
 
 // общие стили всей админки
 
-.adminSelect, .adminMainInput, .adminDateInput {
-  margin-bottom: 20px;
+.adminSelect,
+.adminMainInput,
+.adminDateInput {
+	margin-bottom: 20px;
 }
 
 div.adminCheckbox {
-  & > div {
-    align-items: center;
-  }
+	& > div {
+		align-items: center;
+	}
 
-  p {
-    font-size: 14px;
-    font-weight: 400;
-    color: #000000;
-  }
+	p {
+		font-size: 14px;
+		font-weight: 400;
+		color: #000000;
+	}
 
-  label {
-    margin-right: 5px;
-    min-width: 15px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #868585;
-  }
+	label {
+		margin-right: 5px;
+		min-width: 15px;
+		width: 15px;
+		height: 15px;
+		border: 1px solid #868585;
+	}
 }
 
 .adminSelect {
-  :global {
-    .react-dropdown-select {
-      background: #FFFFFF;
-    }
+	:global {
+		.react-dropdown-select {
+			background: #ffffff;
+		}
 
-    .react-dropdown-select-dropdown {
-      border: 1px solid #113770;
-      border-radius: 3px;
-    }
-  }
+		.react-dropdown-select-dropdown {
+			border: 1px solid #113770;
+			border-radius: 3px;
+		}
+	}
 }
 
 .adminDateInput {
-  max-width: 204px;
+	max-width: 204px;
 
-  :global {
+	:global {
+		.react-datepicker-popper {
+			z-index: 50;
+		}
 
-    .react-datepicker-popper {
-      z-index: 50;
-    }
+		.react-datepicker {
+			border: 1px solid #113770;
+			@include opensans-regular;
+		}
 
-    .react-datepicker {
-      border: 1px solid #113770;
-      @include opensans-regular;
-    }
+		.react-datepicker__day-name {
+			font-size: 11px;
+			color: #98a5a3;
+			text-transform: capitalize;
+		}
 
-    .react-datepicker__day-name {
-      font-size: 11px;
-      color: #98A5A3;
-      text-transform: capitalize;
-    }
+		.react-datepicker__header {
+			background: none;
+			border: none;
+		}
 
-    .react-datepicker__header {
-      background: none;
-      border: none;
-    }
+		.react-datepicker__triangle {
+			display: none;
+		}
 
-    .react-datepicker__triangle {
-      display: none;
-    }
+		.react-datepicker__day {
+			font-size: 13px;
+		}
 
-    .react-datepicker__day {
-      font-size: 13px;
-    }
+		.react-datepicker__navigation-icon--next {
+			width: 9px;
+			height: 15px;
+			background: url('data:image/svg+xml,<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.169473 0.169473C0.223057 0.115753 0.286714 0.0731311 0.356796 0.0440502C0.426879 0.0149692 0.50201 0 0.577886 0C0.653763 0 0.728894 0.0149692 0.798976 0.0440502C0.869058 0.0731311 0.932715 0.115753 0.9863 0.169473L7.90856 7.09174C7.96228 7.14532 8.0049 7.20898 8.03399 7.27906C8.06307 7.34914 8.07804 7.42427 8.07804 7.50015C8.07804 7.57603 8.06307 7.65116 8.03399 7.72124C8.0049 7.79132 7.96228 7.85498 7.90856 7.90857L0.9863 14.8308C0.877982 14.9391 0.731071 15 0.577886 15C0.424701 15 0.277791 14.9391 0.169473 14.8308C0.0611546 14.7225 0.000302023 14.5756 0.000302023 14.4224C0.000302023 14.2692 0.0611546 14.1223 0.169473 14.014L6.68448 7.50015L0.169473 0.9863C0.115752 0.932715 0.0731306 0.869059 0.0440496 0.798977C0.0149687 0.728894 0 0.653763 0 0.577887C0 0.50201 0.0149687 0.426879 0.0440496 0.356797C0.0731306 0.286715 0.115752 0.223058 0.169473 0.169473Z" fill="black"/></svg>')
+				no-repeat;
 
-    .react-datepicker__navigation-icon--next {
-      width: 9px;
-      height: 15px;
-      background: url('data:image/svg+xml,<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.169473 0.169473C0.223057 0.115753 0.286714 0.0731311 0.356796 0.0440502C0.426879 0.0149692 0.50201 0 0.577886 0C0.653763 0 0.728894 0.0149692 0.798976 0.0440502C0.869058 0.0731311 0.932715 0.115753 0.9863 0.169473L7.90856 7.09174C7.96228 7.14532 8.0049 7.20898 8.03399 7.27906C8.06307 7.34914 8.07804 7.42427 8.07804 7.50015C8.07804 7.57603 8.06307 7.65116 8.03399 7.72124C8.0049 7.79132 7.96228 7.85498 7.90856 7.90857L0.9863 14.8308C0.877982 14.9391 0.731071 15 0.577886 15C0.424701 15 0.277791 14.9391 0.169473 14.8308C0.0611546 14.7225 0.000302023 14.5756 0.000302023 14.4224C0.000302023 14.2692 0.0611546 14.1223 0.169473 14.014L6.68448 7.50015L0.169473 0.9863C0.115752 0.932715 0.0731306 0.869059 0.0440496 0.798977C0.0149687 0.728894 0 0.653763 0 0.577887C0 0.50201 0.0149687 0.426879 0.0440496 0.356797C0.0731306 0.286715 0.115752 0.223058 0.169473 0.169473Z" fill="black"/></svg>') no-repeat;
+			&::before {
+				border: none;
+			}
+		}
 
-      &::before {
-        border: none;
-      }
-    }
+		.react-datepicker__current-month {
+			@include opensans-regular;
+			margin-bottom: 10px;
+			font-size: 13px;
+			text-transform: capitalize;
+		}
 
+		.react-datepicker__input-container {
+			&::after {
+				content: '';
+				width: 13px;
+				height: 10px;
+				z-index: 0;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				position: absolute;
+				background: url('data:image/svg+xml,<svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 2.25C4.79837 2.25 5.08452 2.13147 5.2955 1.92049C5.50647 1.70952 5.625 1.42337 5.625 1.125C5.625 0.826631 5.50647 0.540484 5.2955 0.329505C5.08452 0.118527 4.79837 0 4.5 0C4.20163 0 3.91548 0.118527 3.7045 0.329505C3.49353 0.540484 3.375 0.826631 3.375 1.125C3.375 1.42337 3.49353 1.70952 3.7045 1.92049C3.91548 2.13147 4.20163 2.25 4.5 2.25ZM7.875 2.25C8.17337 2.25 8.45952 2.13147 8.6705 1.92049C8.88147 1.70952 9 1.42337 9 1.125C9 0.826631 8.88147 0.540484 8.6705 0.329505C8.45952 0.118527 8.17337 0 7.875 0C7.57663 0 7.29048 0.118527 7.0795 0.329505C6.86853 0.540484 6.75 0.826631 6.75 1.125C6.75 1.42337 6.86853 1.70952 7.0795 1.92049C7.29048 2.13147 7.57663 2.25 7.875 2.25ZM11.25 2.25C11.5484 2.25 11.8345 2.13147 12.0455 1.92049C12.2565 1.70952 12.375 1.42337 12.375 1.125C12.375 0.826631 12.2565 0.540484 12.0455 0.329505C11.8345 0.118527 11.5484 0 11.25 0C10.9516 0 10.6655 0.118527 10.4545 0.329505C10.2435 0.540484 10.125 0.826631 10.125 1.125C10.125 1.42337 10.2435 1.70952 10.4545 1.92049C10.6655 2.13147 10.9516 2.25 11.25 2.25ZM1.125 5.625C1.42337 5.625 1.70952 5.50647 1.92049 5.2955C2.13147 5.08452 2.25 4.79837 2.25 4.5C2.25 4.20163 2.13147 3.91548 1.92049 3.7045C1.70952 3.49353 1.42337 3.375 1.125 3.375C0.826631 3.375 0.540483 3.49353 0.329505 3.7045C0.118526 3.91548 0 4.20163 0 4.5C0 4.79837 0.118526 5.08452 0.329505 5.2955C0.540483 5.50647 0.826631 5.625 1.125 5.625ZM4.5 5.625C4.79837 5.625 5.08452 5.50647 5.2955 5.2955C5.50647 5.08452 5.625 4.79837 5.625 4.5C5.625 4.20163 5.50647 3.91548 5.2955 3.7045C5.08452 3.49353 4.79837 3.375 4.5 3.375C4.20163 3.375 3.91548 3.49353 3.7045 3.7045C3.49353 3.91548 3.375 4.20163 3.375 4.5C3.375 4.79837 3.49353 5.08452 3.7045 5.2955C3.91548 5.50647 4.20163 5.625 4.5 5.625ZM7.875 5.625C8.17337 5.625 8.45952 5.50647 8.6705 5.2955C8.88147 5.08452 9 4.79837 9 4.5C9 4.20163 8.88147 3.91548 8.6705 3.7045C8.45952 3.49353 8.17337 3.375 7.875 3.375C7.57663 3.375 7.29048 3.49353 7.0795 3.7045C6.86853 3.91548 6.75 4.20163 6.75 4.5C6.75 4.79837 6.86853 5.08452 7.0795 5.2955C7.29048 5.50647 7.57663 5.625 7.875 5.625ZM11.25 5.625C11.5484 5.625 11.8345 5.50647 12.0455 5.2955C12.2565 5.08452 12.375 4.79837 12.375 4.5C12.375 4.20163 12.2565 3.91548 12.0455 3.7045C11.8345 3.49353 11.5484 3.375 11.25 3.375C10.9516 3.375 10.6655 3.49353 10.4545 3.7045C10.2435 3.91548 10.125 4.20163 10.125 4.5C10.125 4.79837 10.2435 5.08452 10.4545 5.2955C10.6655 5.50647 10.9516 5.625 11.25 5.625ZM1.125 9C1.42337 9 1.70952 8.88147 1.92049 8.6705C2.13147 8.45952 2.25 8.17337 2.25 7.875C2.25 7.57663 2.13147 7.29048 1.92049 7.0795C1.70952 6.86853 1.42337 6.75 1.125 6.75C0.826631 6.75 0.540483 6.86853 0.329505 7.0795C0.118526 7.29048 0 7.57663 0 7.875C0 8.17337 0.118526 8.45952 0.329505 8.6705C0.540483 8.88147 0.826631 9 1.125 9ZM4.5 9C4.79837 9 5.08452 8.88147 5.2955 8.6705C5.50647 8.45952 5.625 8.17337 5.625 7.875C5.625 7.57663 5.50647 7.29048 5.2955 7.0795C5.08452 6.86853 4.79837 6.75 4.5 6.75C4.20163 6.75 3.91548 6.86853 3.7045 7.0795C3.49353 7.29048 3.375 7.57663 3.375 7.875C3.375 8.17337 3.49353 8.45952 3.7045 8.6705C3.91548 8.88147 4.20163 9 4.5 9ZM7.875 9C8.17337 9 8.45952 8.88147 8.6705 8.6705C8.88147 8.45952 9 8.17337 9 7.875C9 7.57663 8.88147 7.29048 8.6705 7.0795C8.45952 6.86853 8.17337 6.75 7.875 6.75C7.57663 6.75 7.29048 6.86853 7.0795 7.0795C6.86853 7.29048 6.75 7.57663 6.75 7.875C6.75 8.17337 6.86853 8.45952 7.0795 8.6705C7.29048 8.88147 7.57663 9 7.875 9Z" fill="black"/></svg>')
+					no-repeat;
+			}
 
-    .react-datepicker__current-month {
-      @include opensans-regular;
-      margin-bottom: 10px;
-      font-size: 13px;
-      text-transform: capitalize;
-    }
-
-    .react-datepicker__input-container {
-      &::after {
-        content: '';
-        width: 13px;
-        height: 10px;
-        z-index: 0;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        background: url('data:image/svg+xml,<svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 2.25C4.79837 2.25 5.08452 2.13147 5.2955 1.92049C5.50647 1.70952 5.625 1.42337 5.625 1.125C5.625 0.826631 5.50647 0.540484 5.2955 0.329505C5.08452 0.118527 4.79837 0 4.5 0C4.20163 0 3.91548 0.118527 3.7045 0.329505C3.49353 0.540484 3.375 0.826631 3.375 1.125C3.375 1.42337 3.49353 1.70952 3.7045 1.92049C3.91548 2.13147 4.20163 2.25 4.5 2.25ZM7.875 2.25C8.17337 2.25 8.45952 2.13147 8.6705 1.92049C8.88147 1.70952 9 1.42337 9 1.125C9 0.826631 8.88147 0.540484 8.6705 0.329505C8.45952 0.118527 8.17337 0 7.875 0C7.57663 0 7.29048 0.118527 7.0795 0.329505C6.86853 0.540484 6.75 0.826631 6.75 1.125C6.75 1.42337 6.86853 1.70952 7.0795 1.92049C7.29048 2.13147 7.57663 2.25 7.875 2.25ZM11.25 2.25C11.5484 2.25 11.8345 2.13147 12.0455 1.92049C12.2565 1.70952 12.375 1.42337 12.375 1.125C12.375 0.826631 12.2565 0.540484 12.0455 0.329505C11.8345 0.118527 11.5484 0 11.25 0C10.9516 0 10.6655 0.118527 10.4545 0.329505C10.2435 0.540484 10.125 0.826631 10.125 1.125C10.125 1.42337 10.2435 1.70952 10.4545 1.92049C10.6655 2.13147 10.9516 2.25 11.25 2.25ZM1.125 5.625C1.42337 5.625 1.70952 5.50647 1.92049 5.2955C2.13147 5.08452 2.25 4.79837 2.25 4.5C2.25 4.20163 2.13147 3.91548 1.92049 3.7045C1.70952 3.49353 1.42337 3.375 1.125 3.375C0.826631 3.375 0.540483 3.49353 0.329505 3.7045C0.118526 3.91548 0 4.20163 0 4.5C0 4.79837 0.118526 5.08452 0.329505 5.2955C0.540483 5.50647 0.826631 5.625 1.125 5.625ZM4.5 5.625C4.79837 5.625 5.08452 5.50647 5.2955 5.2955C5.50647 5.08452 5.625 4.79837 5.625 4.5C5.625 4.20163 5.50647 3.91548 5.2955 3.7045C5.08452 3.49353 4.79837 3.375 4.5 3.375C4.20163 3.375 3.91548 3.49353 3.7045 3.7045C3.49353 3.91548 3.375 4.20163 3.375 4.5C3.375 4.79837 3.49353 5.08452 3.7045 5.2955C3.91548 5.50647 4.20163 5.625 4.5 5.625ZM7.875 5.625C8.17337 5.625 8.45952 5.50647 8.6705 5.2955C8.88147 5.08452 9 4.79837 9 4.5C9 4.20163 8.88147 3.91548 8.6705 3.7045C8.45952 3.49353 8.17337 3.375 7.875 3.375C7.57663 3.375 7.29048 3.49353 7.0795 3.7045C6.86853 3.91548 6.75 4.20163 6.75 4.5C6.75 4.79837 6.86853 5.08452 7.0795 5.2955C7.29048 5.50647 7.57663 5.625 7.875 5.625ZM11.25 5.625C11.5484 5.625 11.8345 5.50647 12.0455 5.2955C12.2565 5.08452 12.375 4.79837 12.375 4.5C12.375 4.20163 12.2565 3.91548 12.0455 3.7045C11.8345 3.49353 11.5484 3.375 11.25 3.375C10.9516 3.375 10.6655 3.49353 10.4545 3.7045C10.2435 3.91548 10.125 4.20163 10.125 4.5C10.125 4.79837 10.2435 5.08452 10.4545 5.2955C10.6655 5.50647 10.9516 5.625 11.25 5.625ZM1.125 9C1.42337 9 1.70952 8.88147 1.92049 8.6705C2.13147 8.45952 2.25 8.17337 2.25 7.875C2.25 7.57663 2.13147 7.29048 1.92049 7.0795C1.70952 6.86853 1.42337 6.75 1.125 6.75C0.826631 6.75 0.540483 6.86853 0.329505 7.0795C0.118526 7.29048 0 7.57663 0 7.875C0 8.17337 0.118526 8.45952 0.329505 8.6705C0.540483 8.88147 0.826631 9 1.125 9ZM4.5 9C4.79837 9 5.08452 8.88147 5.2955 8.6705C5.50647 8.45952 5.625 8.17337 5.625 7.875C5.625 7.57663 5.50647 7.29048 5.2955 7.0795C5.08452 6.86853 4.79837 6.75 4.5 6.75C4.20163 6.75 3.91548 6.86853 3.7045 7.0795C3.49353 7.29048 3.375 7.57663 3.375 7.875C3.375 8.17337 3.49353 8.45952 3.7045 8.6705C3.91548 8.88147 4.20163 9 4.5 9ZM7.875 9C8.17337 9 8.45952 8.88147 8.6705 8.6705C8.88147 8.45952 9 8.17337 9 7.875C9 7.57663 8.88147 7.29048 8.6705 7.0795C8.45952 6.86853 8.17337 6.75 7.875 6.75C7.57663 6.75 7.29048 6.86853 7.0795 7.0795C6.86853 7.29048 6.75 7.57663 6.75 7.875C6.75 8.17337 6.86853 8.45952 7.0795 8.6705C7.29048 8.88147 7.57663 9 7.875 9Z" fill="black"/></svg>') no-repeat;
-      }
-
-      input {
-        padding-right: 25px;
-      }
-    }
-  }
+			input {
+				padding-right: 25px;
+			}
+		}
+	}
 }
 
 .adminTimeInput {
-  max-width: 204px;
+	max-width: 204px;
 
-  :global {
-    .react-datepicker {
-      border: 1px solid #113770;
-      @include opensans-regular;
-    }
+	:global {
+		.react-datepicker {
+			border: 1px solid #113770;
+			@include opensans-regular;
+		}
 
+		.react-datepicker__header {
+			display: none;
+		}
 
-    .react-datepicker__header {
-      display: none;
-    }
+		.react-datepicker__time-list-item {
+			font-size: 14px;
+			padding: 0 !important;
+		}
 
-    .react-datepicker__time-list-item {
-      font-size: 14px;
-      padding: 0 !important;
-    }
+		.react-datepicker__triangle {
+			display: none;
+		}
 
-    .react-datepicker__triangle {
-      display: none;
-    }
+		.react-datepicker__input-container {
+			&::after {
+				content: '';
+				width: 13px;
+				height: 13px;
+				z-index: 0;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				position: absolute;
+				background: url('data:image/svg+xml,<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.4C3.27804 12.4 0.6 9.72196 0.6 6.5C0.6 3.27804 3.27804 0.6 6.5 0.6C9.72196 0.6 12.4 3.27804 12.4 6.5C12.4 9.72719 9.80343 12.4 6.5 12.4Z" stroke="black" stroke-width="1.2"/><path d="M6.50364 7.47447C6.33031 7.47447 6.24365 7.3878 6.15698 7.30113C5.98365 7.1278 6.07032 6.86781 6.24365 6.69448L9.71032 4.09448C9.88365 3.92115 10.1437 4.00782 10.317 4.18115C10.4903 4.35448 10.4037 4.61447 10.2303 4.7878L6.76366 7.3878C6.76366 7.47447 6.67697 7.47447 6.50364 7.47447Z" fill="black" stroke="black" stroke-width="0.3"/><path d="M6.50208 7.475C6.41541 7.475 6.32876 7.47499 6.24209 7.38832L3.64209 5.65499C3.46876 5.48166 3.38208 5.22167 3.55542 5.04834C3.72875 4.87501 3.98876 4.78833 4.16209 4.96167L6.76209 6.695C6.93543 6.86833 7.0221 7.12832 6.84877 7.30165C6.84877 7.38832 6.67541 7.475 6.50208 7.475Z" fill="black" stroke="black" stroke-width="0.3"/></svg>')
+					no-repeat;
+			}
 
-    .react-datepicker__input-container {
-      &::after {
-        content: '';
-        width: 13px;
-        height: 13px;
-        z-index: 0;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        background: url('data:image/svg+xml,<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 12.4C3.27804 12.4 0.6 9.72196 0.6 6.5C0.6 3.27804 3.27804 0.6 6.5 0.6C9.72196 0.6 12.4 3.27804 12.4 6.5C12.4 9.72719 9.80343 12.4 6.5 12.4Z" stroke="black" stroke-width="1.2"/><path d="M6.50364 7.47447C6.33031 7.47447 6.24365 7.3878 6.15698 7.30113C5.98365 7.1278 6.07032 6.86781 6.24365 6.69448L9.71032 4.09448C9.88365 3.92115 10.1437 4.00782 10.317 4.18115C10.4903 4.35448 10.4037 4.61447 10.2303 4.7878L6.76366 7.3878C6.76366 7.47447 6.67697 7.47447 6.50364 7.47447Z" fill="black" stroke="black" stroke-width="0.3"/><path d="M6.50208 7.475C6.41541 7.475 6.32876 7.47499 6.24209 7.38832L3.64209 5.65499C3.46876 5.48166 3.38208 5.22167 3.55542 5.04834C3.72875 4.87501 3.98876 4.78833 4.16209 4.96167L6.76209 6.695C6.93543 6.86833 7.0221 7.12832 6.84877 7.30165C6.84877 7.38832 6.67541 7.475 6.50208 7.475Z" fill="black" stroke="black" stroke-width="0.3"/></svg>') no-repeat;
-      }
-
-      input {
-        padding-right: 25px;
-      }
-    }
-  }
+			input {
+				padding-right: 25px;
+			}
+		}
+	}
 }
 
-
 .adminTitleTab {
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  margin-bottom: 30px;
-  @media (max-width: 1280px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	margin-bottom: 30px;
+	@media (max-width: 1280px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-  h1 {
-    font-size: 27px;
-    line-height: 1;
-    margin-bottom: 0;
-  }
+	h1 {
+		font-size: 27px;
+		line-height: 1;
+		margin-bottom: 0;
+	}
 }
 
 .adminBtns {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  width: 100%;
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
-
-
 .adminPrompt {
-  font-size: 14px;
-  color: #91969A;
-  margin-bottom: 15px;
+	font-size: 14px;
+	color: #91969a;
+	margin-bottom: 15px;
 }
 
 .adminBlockItem {
-  position: relative;
-  background: #f4f7fa;
-  border: 1px dashed #98a5a3;
-  border-radius: 5px;
-  padding: 10px 24px 20px 24px;
-  margin-bottom: 15px;
+	position: relative;
+	background: #f4f7fa;
+	border: 1px dashed #98a5a3;
+	border-radius: 5px;
+	padding: 10px 24px 20px 24px;
+	margin-bottom: 15px;
 
-  h4 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
+	h4 {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
 }
 
 .adminBlockSection {
-  padding-bottom: 25px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #E3DDDD;
+	padding-bottom: 25px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e3dddd;
 }
 
 .adminRemoveBlockBtn {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  right: 12px;
-  top: 12px;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 12px;
+	top: 12px;
 }
 
 .adminReturnLink {
-  display: inline-block;
-  padding-left: 20px;
-  position: relative;
-  font-size: 14px;
-  text-decoration: underline;
-  color: #002C47;
-  background: url('data:image/svg+xml,<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.158951 5.63061L4.01736 9.68649C4.23762 9.91435 4.5946 9.92195 4.82246 9.70928C5.05031 9.48902 5.05791 9.13204 4.84524 8.90418L1.89827 5.8129L11.4987 5.8129C11.8101 5.8129 12.0684 5.55466 12.0684 5.24325C12.0684 4.93185 11.8101 4.67361 11.4987 4.67361L1.89827 4.67361L4.84524 1.58232C5.06551 1.35447 5.05032 0.997487 4.82246 0.777224C4.70853 0.67089 4.57181 0.617723 4.4275 0.617723C4.2756 0.617723 4.12369 0.678485 4.01736 0.792415L0.158951 4.8407C-0.0537176 5.06097 -0.0537176 5.41035 0.158951 5.63061Z" fill="%23002C47"/></svg>') no-repeat left center ;
-  &:not(:last-child) {
-    margin-bottom: 35px;
-  }
+	display: inline-block;
+	padding-left: 20px;
+	position: relative;
+	font-size: 14px;
+	text-decoration: underline;
+	color: #002c47;
+	background: url('data:image/svg+xml,<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.158951 5.63061L4.01736 9.68649C4.23762 9.91435 4.5946 9.92195 4.82246 9.70928C5.05031 9.48902 5.05791 9.13204 4.84524 8.90418L1.89827 5.8129L11.4987 5.8129C11.8101 5.8129 12.0684 5.55466 12.0684 5.24325C12.0684 4.93185 11.8101 4.67361 11.4987 4.67361L1.89827 4.67361L4.84524 1.58232C5.06551 1.35447 5.05032 0.997487 4.82246 0.777224C4.70853 0.67089 4.57181 0.617723 4.4275 0.617723C4.2756 0.617723 4.12369 0.678485 4.01736 0.792415L0.158951 4.8407C-0.0537176 5.06097 -0.0537176 5.41035 0.158951 5.63061Z" fill="%23002C47"/></svg>')
+		no-repeat left center;
+	&:not(:last-child) {
+		margin-bottom: 35px;
+	}
 }

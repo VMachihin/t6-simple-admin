@@ -1,43 +1,45 @@
-@import "src/assets/styles/vars";
+@import 'src/styles/vars';
 
 .selectWrapper {
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    display: block;
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 5px;
-  }
+	label {
+		font-size: 14px;
+		font-weight: 600;
+		display: block;
+		font-family: 'Open Sans', sans-serif;
+		margin-bottom: 5px;
+	}
 
-  :global {
-    .react-dropdown-select {
-      outline: 1px solid #afafaf;
-      border: none;
-      border-radius: 3px;
-      padding: 2px 10px;
-      min-height: 35px;
-      @include opensans-regular;
-      font-size: 14px;
-      &:focus, &:focus-within {
-        box-shadow: 0 0 0 1px rgba(#184F71, 1);
-      }
-    }
+	:global {
+		.react-dropdown-select {
+			outline: 1px solid #afafaf;
+			border: none;
+			border-radius: 3px;
+			padding: 2px 10px;
+			min-height: 35px;
+			@include opensans-regular;
+			font-size: 14px;
+			&:focus,
+			&:focus-within {
+				box-shadow: 0 0 0 1px rgba(#184f71, 1);
+			}
+		}
 
-    .react-dropdown-select-dropdown-handle {
-      background: url('data:image/svg+xml,<svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.38652 0.347656C5.53987 0.347656 5.76998 0.424336 5.84665 0.57769L10.4473 5.17833C10.6773 5.40836 10.6773 5.86842 10.4473 6.17513C10.2173 6.40516 9.75716 6.40516 9.45045 6.17513L5.30986 2.03456L1.16926 6.17513C0.939233 6.40516 0.479226 6.40516 0.172517 6.17513C-0.0575151 5.9451 -0.0575151 5.48503 0.172517 5.17832L4.77315 0.57769C5.00318 0.424335 5.23316 0.347656 5.38652 0.347656Z" fill="black"/></svg>') no-repeat;
-      width: 11px;
-      height: 7px;
-      margin: 0;
+		.react-dropdown-select-dropdown-handle {
+			background: url('data:image/svg+xml,<svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.38652 0.347656C5.53987 0.347656 5.76998 0.424336 5.84665 0.57769L10.4473 5.17833C10.6773 5.40836 10.6773 5.86842 10.4473 6.17513C10.2173 6.40516 9.75716 6.40516 9.45045 6.17513L5.30986 2.03456L1.16926 6.17513C0.939233 6.40516 0.479226 6.40516 0.172517 6.17513C-0.0575151 5.9451 -0.0575151 5.48503 0.172517 5.17832L4.77315 0.57769C5.00318 0.424335 5.23316 0.347656 5.38652 0.347656Z" fill="black"/></svg>')
+				no-repeat;
+			width: 11px;
+			height: 7px;
+			margin: 0;
 
-      svg {
-        display: none;
-      }
-    }
-  }
+			svg {
+				display: none;
+			}
+		}
+	}
 }
 .warningMessage {
-  color: #F00000;
-  font-size: 14px;
-  line-height: 1;
-  padding-top: 5px;
+	color: #f00000;
+	font-size: 14px;
+	line-height: 1;
+	padding-top: 5px;
 }

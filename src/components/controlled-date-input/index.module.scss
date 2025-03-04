@@ -1,61 +1,57 @@
-@import 'src/assets/styles/vars';
-
+@import 'src/styles/vars';
 
 .warningMessage {
-  color: #F00000;
-  font-size: 14px;
-  line-height: 1;
-  padding-top: 5px;
+	color: #f00000;
+	font-size: 14px;
+	line-height: 1;
+	padding-top: 5px;
 }
 
-
-
 .dateInputWrapper {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 
-  :global(.react-datepicker-wrapper) {
-    width: 100%;
-  }
+	:global(.react-datepicker-wrapper) {
+		width: 100%;
+	}
 
-  input {
-    @include opensans-regular;
-    font-size: 14px;
-    padding: 9px 10px;
-    outline: 1px solid #afafaf;
-    border-radius: 3px;
-    width: 100%;
-    background-color: #fff;
-    color: #000000;
-    border: none;
+	input {
+		@include opensans-regular;
+		font-size: 14px;
+		padding: 9px 10px;
+		outline: 1px solid #afafaf;
+		border-radius: 3px;
+		width: 100%;
+		background-color: #fff;
+		color: #000000;
+		border: none;
 
+		&::placeholder {
+			color: #868686;
+		}
+	}
 
-    &::placeholder {
-      color: #868686;
-    }
-  }
+	label {
+		position: relative;
 
-  label {
-    position: relative;
+		p {
+			color: #000000;
+			@include opensans-semi;
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
 
-    p {
-      color: #000000;
-      @include opensans-semi;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    span {
-      margin-left: 10px;
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-    }
-  }
+		span {
+			margin-left: 10px;
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+	}
 }
 
 ._noValid {
-  input {
-    outline: 1px solid #F00000;
-  }
+	input {
+		outline: 1px solid #f00000;
+	}
 }
